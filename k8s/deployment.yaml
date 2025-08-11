@@ -1,20 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:
-  name: wil-playground
-  namespace: dev
+metadata: 
+  name: app-one
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wil-playground
+      app: app-one
   template:
     metadata:
       labels:
-        app: wil-playground
+        app: app-one
     spec:
       containers:
-      - name: wil-playground
-        image: wil42/playground:v1
-        ports:
-        - containerPort: 8888
+        - name: app-one
+          image: paulbouwer/hello-kubernetes:1.10
+          env:
+          - name: MESSAGE
+            value: "Hello from app1."
+          ports:
+            - containerPort: 8080
+
