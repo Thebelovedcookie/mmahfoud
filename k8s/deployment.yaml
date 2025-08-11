@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: 
   name: app-one
+  namespace: dev
 spec:
   replicas: 1
   selector:
@@ -20,4 +21,3 @@ spec:
             value: "Hello from app1."
           ports:
             - containerPort: 8080
-
