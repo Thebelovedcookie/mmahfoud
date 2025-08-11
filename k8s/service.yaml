@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: app-one
+  name: wil-playground
   namespace: dev
 spec:
   selector:
-    app: app-one
+    app: wil-playground
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8080
+  - protocol: TCP
+    port: 8888
+    targetPort: 8888
   type: LoadBalancer
