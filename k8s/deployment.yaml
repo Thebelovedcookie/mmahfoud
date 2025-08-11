@@ -18,6 +18,6 @@ spec:
           image: paulbouwer/hello-kubernetes:1.10
           env:
           - name: MESSAGE
-            value: "test de changement de message automatiquement"
+            value: "je rechange de message"
           ports:
             - containerPort: 8080
